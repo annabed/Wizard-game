@@ -12,7 +12,7 @@ void first_location(Wizard *wizard)
         first_file.close();
     }
     else
-        cout << "Oups, you are still too drunk to talk with people";
+        cout << "Oups, you are still too drunk to talk with people" << endl;
     int decision;
     cin >> decision;
     switch(decision)
@@ -54,21 +54,22 @@ void second_location(Wizard *wizard)
         second_file.close();
     }
     else
-        cout << "Oups, you are still too drunk to talk with people";
+        cout << "Oups, you are still too drunk to talk with people" << endl;
     int answer;
     int good = 0;
     while(good == 0)
     {
+        cin.clear();
         cin >> answer;
-    if(answer == 720)
-    {
-        cout << "'Let it be, you're right, have your knife back." << endl;
-        string item = dwarf.get_person_item();
-        wizard->set_item(1, item);
-        good = 1;
-    }
-    else
-        cout << "'Try again.'" << endl;
+        if(answer == 720)
+        {
+            cout << "'Let it be, you're right, have your knife back." << endl;
+            string item = dwarf.get_person_item();
+            wizard->set_item(1, item);
+            good = 1;
+        }
+        else
+            cout << "'Try again.'" << endl;
     }
 }
 
@@ -85,7 +86,7 @@ void third_location(Wizard *wizard)
         file.close();
     }
     else
-        cout << "Oups, you are still too drunk to talk with people";
+        cout << "Oups, you are still too drunk to talk with people" << endl;
     wizard->set_item(2, "wand");
 }
 
@@ -103,7 +104,7 @@ void fourth_location(Wizard *wizard)
         file.close();
     }
     else
-        cout << "Oups, you are still too drunk to talk with people";
+        cout << "Oups, you are still too drunk to talk with people" << endl;
     string correct[6] = {"am", "are", "is", "are", "are", "are"};
     string answer[6];
     string questions[6] = {"I", "You", "He/she/it", "We", "You", "They"};
@@ -142,7 +143,7 @@ void fifth_location(Wizard *wizard)
         file.close();
     }
     else
-        cout << "Oups, you are still too drunk to talk with people";
+        cout << "Oups, you are still too drunk to talk with people" << endl;
     string prayer;
     cin >> prayer;
     int good_length = 20;

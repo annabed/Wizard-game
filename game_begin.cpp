@@ -27,7 +27,7 @@ int main()
     int dice;
     int already_visited[6] = {0};
     int helper = 0;
-    while (helper <=6 )
+    while (helper <6 )
     {
         //the game proceeds until the wizard collects all his 5 items
         cout << endl;
@@ -100,7 +100,7 @@ int main()
     cout << endl;
     if(wizard.get_item(0) == "0" || wizard.get_item(1) == "0" || wizard.get_item(2) == "0" || wizard.get_item(4) == "0" || wizard.get_item(4) == "0")
     {
-        cout << "Unfortunately, you've lost the game.";
+        cout << "Unfortunately, you've lost the game." << endl;
     }
     else
     {
